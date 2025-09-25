@@ -71,15 +71,15 @@ const PawnaLakeTabs: React.FC = () => {
             {/* Sticky tab navigation */}
             <div
                 ref={tabNavRef}
-                className="sticky top-14"
+                className="sticky top-15 md:top-14"
             >
-                <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col md:flex-row">
+                <div className="w-full md:max-w-7xl mx-auto">
+                    <div className="flex flex-row flex-wrap">
                         {tabs.map((tab, index) => (
                             <button
                                 key={tab.id}
                                 onClick={() => scrollToSection(tab.id)}
-                                className={`flex-1 px-6 py-4 text-center font-medium text-lg transition-all duration-300 ${index < tabs.length - 1 ? 'border-r-2 border-teal-600' : ''
+                                className={`flex-1 px-0 py-3 md:px-6 md:py-4 text-center font-medium text-[10px] md:text-lg transition-all duration-300 ${index < tabs.length - 1 ? 'border-r-2 border-teal-600' : ''
                                     } md:border-b-0 border-b-2 md:last:border-r-0 last:border-b-0 hover:bg-yellow-600 hover:-translate-y-0.5 ${activeTab === tab.id
                                         ? 'bg-teal-600 text-white'
                                         : 'bg-yellow-500 text-white hover:bg-yellow-600'
@@ -162,25 +162,25 @@ const PawnaLakeTabs: React.FC = () => {
                         <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
                             <h3 className="text-xl font-bold text-blue-800 mb-4">Day 1: Arrival & Adventure</h3>
                             <ul className="space-y-2 text-gray-700">
-                                <li>• 2:00 PM - Arrival and check-in</li>
-                                <li>• 3:00 PM - Welcome drinks and orientation</li>
-                                <li>• 4:00 PM - Lakeside activities and games</li>
-                                <li>• 6:00 PM - Evening tea and snacks</li>
-                                <li>• 8:00 PM - Barbecue dinner</li>
-                                <li>• 9:30 PM - Bonfire and musical night</li>
-                                <li>• 11:00 PM - Rest in comfortable tents</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 2:00 PM - Arrival and check-in</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 3:00 PM - Welcome drinks and orientation</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 4:00 PM - Lakeside activities and games</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 6:00 PM - Evening tea and snacks</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 8:00 PM - Barbecue dinner</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 9:30 PM - Bonfire and musical night</li>
+                                <li className="border-l-4 border-blue-400 px-4 py-2 bg-white/50 rounded-r">• 11:00 PM - Rest in comfortable tents</li>
                             </ul>
                         </div>
 
                         <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
                             <h3 className="text-xl font-bold text-orange-800 mb-4">Day 2: Morning Bliss</h3>
                             <ul className="space-y-2 text-gray-700">
-                                <li>• 6:30 AM - Early morning tea</li>
-                                <li>• 7:00 AM - Sunrise photography</li>
-                                <li>• 8:00 AM - Breakfast by the lake</li>
-                                <li>• 10:00 AM - Water activities</li>
-                                <li>• 12:00 PM - Lunch and relaxation</li>
-                                <li>• 2:00 PM - Departure with memories</li>
+                                <li className="border-l-4 border-orange-400 px-4 py-2 bg-white/50 rounded-r">• 6:30 AM - Early morning tea</li>
+                                <li className="border-l-4 border-orange-400 px-4 py-2 bg-white/50 rounded-r">• 7:00 AM - Sunrise photography</li>
+                                <li className="border-l-4 border-orange-400 px-4 py-2 bg-white/50 rounded-r">• 8:00 AM - Breakfast by the lake</li>
+                                <li className="border-l-4 border-orange-400 px-4 py-2 bg-white/50 rounded-r">• 10:00 AM - Water activities</li>
+                                <li className="border-l-4 border-orange-400 px-4 py-2 bg-white/50 rounded-r">• 12:00 PM - Lunch and relaxation</li>
+                                <li className="border-l-4 border-orange-400 px-4 py-2 bg-white/50 rounded-r">• 2:00 PM - Departure with memories</li>
                             </ul>
                         </div>
                     </div>
